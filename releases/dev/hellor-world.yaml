@@ -1,0 +1,18 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: hello-world
+  namespace: dev
+  annotations:
+    fluxcd.io/automated: "false"
+    filter.fluxcd.io/chart-image: glob:dev-*
+spec:
+  releaseName: hello-world
+  chart:
+    git: git@github.com:fluxcd/gitops-helm-operator
+    path: charts/hello-world
+    ref: master
+  values:
+    image: davidfraga610/hello-world:dev-hdtwcel9
+    replicaCount: 1
