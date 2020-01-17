@@ -3,10 +3,10 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: hello-world
-  namespace: prod
+  namespace: dev
   annotations:
-    fluxcd.io/automated: "true"
-    filter.fluxcd.io/chart-image: semver:~0.4
+    fluxcd.io/automated: "false"
+    filter.fluxcd.io/chart-image: glob:dev-*
 spec:
   releaseName: hello-world
   chart:
@@ -14,5 +14,5 @@ spec:
     path: charts/hello-world
     ref: master
   values:
-    image: davidfraga610/hello-world:0.4.11
-    replicaCount: 3
+    image: davidfraga610/hello-world:dev-1234
+    replicaCount: 1
