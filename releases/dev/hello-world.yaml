@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: hello-world
   chart:
-    git: git@github.com:fluxcd/gitops-helm-operator
+    git: git@github.com:davidfragalaureano/gitops-helm-operator
     path: charts/hello-world
     ref: master
   values:
