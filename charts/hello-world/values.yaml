@@ -6,7 +6,8 @@ replicaCount: 1
 
 image:
   repository: davidfraga610/hello-world
-  pullPolicy: IfNotPresent
+  pullPolicy: "IfNotPresent"
+  tag: override-me
 
 imagePullSecrets: []
 nameOverride: ""
