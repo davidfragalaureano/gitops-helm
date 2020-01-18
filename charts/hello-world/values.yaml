@@ -9,6 +9,8 @@ image:
   imagePullPolicy: IfNotPresent
   tag: override-me
 
+port: 8005
+
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""

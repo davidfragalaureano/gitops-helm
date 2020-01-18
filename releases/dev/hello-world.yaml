@@ -16,6 +16,5 @@ spec:
   values:
     image:
       repository: davidfraga610/hello-world
-      imagePullPolicy: IfNotPresent
       tag: dev-1234
     replicaCount: 1
