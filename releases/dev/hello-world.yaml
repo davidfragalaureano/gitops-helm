@@ -14,5 +14,8 @@ spec:
     path: charts/hello-world
     ref: master
   values:
-    image: davidfraga610/hello-world:dev-1234
+    image:
+      repository: davidfraga610/hello-world
+      imagePullPolicy: IfNotPresent
+      tag: dev-1234
     replicaCount: 1

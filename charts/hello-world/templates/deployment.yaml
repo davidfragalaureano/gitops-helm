@@ -1,6 +1,4 @@
-{{- $repository  := .Values.image.repository -}}
-{{- $tag  := .Values.image.tag -}}
-
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -27,8 +25,8 @@ spec:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ $repository }}:{{ $tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.imagePullPolicy }}
           ports:
             - name: http
               containerPort: 80
