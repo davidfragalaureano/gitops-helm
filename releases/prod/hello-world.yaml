@@ -16,5 +16,5 @@ spec:
   values:
     image:
       repository: davidfraga610/hello-world
-      tag: 0.1.0
+      tag: 0.1.1
     replicaCount: 1
